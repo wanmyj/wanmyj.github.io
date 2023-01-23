@@ -30,3 +30,8 @@
 *.exe
 *.out
 *.app
+*.gem
+.bundle
+.jekyll-cache
+.sass-cache
+_site
