@@ -1,3 +1,7 @@
+---
+layout: post
+tags: [config]
+---
 
 
 # 需要把 [repo1](https://github.com/abhinavs/moonwalk.git) 里所有内容复制到一个已经存在的[repo2](xx)里面，这个仓库目前可能不是空的
