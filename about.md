@@ -3,6 +3,6 @@ layout: post
 title: About
 ---
 
-This is an example page!
+This is a personal blogger!
 
-Actually, it has the same layout of a post...
+If you find any errors in any of the posts, feel free to report them by submitting an issue at [this link](https://github.com/wanmyj/wanmyj.github.io/issues).

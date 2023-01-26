@@ -1,11 +1,11 @@
 navbar_entries:
-  - title: about
+  - title: About
     url: about
 
-  - title: blog
+  - title: Blog
     url: blog
 
-  - title: website
+  - title: Acknowledgements
     url: https://www.abhinav.co
 
 project_entries:
@@ -54,14 +54,14 @@ old_project_entries:
     desc: The better people know you, the better they collaborate
 
 footer_entries:
-  - title: abhinav's homepage
-    url: https://www.abhinav.co
+  - title: wanmyj's homepage
+    url: https://blog.zhaoc.click
 
   - title: twitter
-    url: https://twitter.com/abhinav
+    url: https://twitter.com/gas8988
 
   - title: github
-    url: https://github.com/abhinavs
+    url: https://github.com/wanmyj
 
   - title: feed
     url: feed.xml

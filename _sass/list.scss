@@ -1,3 +1,23 @@
+ul.activities-list {
+  display: block;
+  //justify-content: space-between;
+  margin-top: 0em;
+  margin-left: -40px;
+
+  li {
+    display:block;
+    margin-right: 1em;
+    margin-bottom: 10px;
+  }
+
+  li span {
+    text-decoration: none;
+    margin-right: 5px;
+    font-weight: normal
+  }
+
+}
+
 ul.horizontal-list {
   display: flex;
   //justify-content: space-between;

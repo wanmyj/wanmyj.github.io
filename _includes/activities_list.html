@@ -1,0 +1,15 @@
+<ul class="activities-list">
+{% assign found = 0 %}
+{% for item in include.collection reversed %}
+  {% if item.active == true %}
+    {% assign found = found | plus: 1 %}
+    <li>
+      <span style="color: #87CEFA; font-style: italic;">{{ item.start_time }}</span>
+      <span>{{ item.title }}</span>
+    </li>
+    {% if found == 2 %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+</ul>

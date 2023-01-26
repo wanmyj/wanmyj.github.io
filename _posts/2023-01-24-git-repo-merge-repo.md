@@ -1,10 +1,11 @@
 ---
 layout: post
+data: "2023-01-25"
 tags: [config]
 ---
 
 
-# 需要把 [repo1](https://github.com/abhinavs/moonwalk.git) 里所有内容复制到一个已经存在的[repo2](xx)里面，这个仓库目前可能不是空的
+## 需要把 [repo1](https://github.com/abhinavs/moonwalk.git) 里所有内容复制到一个已经存在的[repo2](xx)里面，这个仓库目前可能不是空的
 
 可以使用 `git remote` 和 `git pull` 命令来实现此操作。
 

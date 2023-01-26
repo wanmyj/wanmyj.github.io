@@ -1,0 +1,7 @@
+显示page中所有的属性
+<pre>
+    {{ page_rdb | inspect_tbd }}
+</pre>
+
+显示超链接，内容插入title
+<a href="https://www.example.com/{{page.title | downcase | replace:' ','-'}}">{{page.title}}</a>

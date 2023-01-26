@@ -1,8 +1,17 @@
 ---
 layout: default
+author: "wanmyj"
 ---
 
 <a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a>
 <h1 class="post-title">{{ page.title }}</h1>
 {% include date_and_social_share.html %}
+
 {{ content }}
+
+<br>
+
+<p style="font-style: italic; color: #87CEFA;">
+    The source code for this article can be found <a href="https://github.com/wanmyj/wanmyj.github.io/blob/main/{{page.relative_path}}" style="color: #0385d6;">here</a>.
+    If you find any errors or have any comments, please click on the link to raise an issue in the corresponding GitHub repo.
+</p>

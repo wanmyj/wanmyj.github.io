@@ -1,6 +1,8 @@
 <p class="post-date text-bold">
   {% if page.author %}
     <span class="text-upcase">{{ page.author }}</span> / 
+  {% elsif layout.author %}
+    <span class="text-upcase">{{ layout.author }}</span> / 
   {% endif %}
   {% if page.date %}
     <span class="text-upcase">{{ page.date | date: "%B %Y"}}</span>
