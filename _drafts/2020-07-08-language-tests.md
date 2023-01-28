@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Language Tests"
+categories: [original]
 ---
 
 Note: Text is from [moving](https://github.com/huangyz0918/moving), which is another good Jekyll theme.

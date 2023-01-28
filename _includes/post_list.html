@@ -1,12 +1,36 @@
-{% if site.posts.size > 0 %}
-  <ul>
-    {% for post in site.posts %}
-      <li class="post-list-item">
-        <span class="home-date">
-          {{ post.date | date: site.theme_config.date_format }}»
-        </span>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-      </li>
+<div id="category-list">
+  {% if site.posts.size > 0 %}
+    {% for category in site.categories %}
+      {% if category[1].size != 0 %}
+        <h3>{{ category[0] }}</h3>
+        <ul>
+          {% for post in category[1] %}
+            <li class="post-list-item">
+              <span class="home-date">
+                {{ post.date | date: site.theme_config.date_format }}»
+              </span>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>          
+          {% endfor %}
+        </ul>
+      {% endif %}
     {% endfor %}
-  </ul>
-{% endif %}
+
+    {% assign uncategorized_posts = site.posts | where: "categories", empty %}
+    {% if uncategorized_posts.size != 0 %}
+      <h3>uncategorized</h3>
+      <ul>
+        {% for post in site.posts %}
+          {% if post.categories == empty %}
+            <li class="post-list-item">
+              <span class="home-date">
+                {{ post.date | date: site.theme_config.date_format }}»
+              </span>
+              <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            </li>        
+          {% endif %}
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endif %}
+</div>
