@@ -16,8 +16,15 @@
       {% endif %}
     {% endfor %}
 
-    {% assign uncategorized_posts = site.posts | where: "categories", empty %}
-    {% if uncategorized_posts.size != 0 %}
+    {% assign has_uncategorized_posts = false %}
+    {% for post in site.posts %}
+        {% if post.categories.size == 0 %}
+            {% assign has_uncategorized_posts = true %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+
+    {% if has_uncategorized_posts != 0 %}
       <h3>uncategorized</h3>
       <ul>
         {% for post in site.posts %}

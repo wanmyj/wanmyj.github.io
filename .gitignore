@@ -36,3 +36,5 @@
 .sass-cache
 _site
 .vscode
+
+Gemfile.lock
