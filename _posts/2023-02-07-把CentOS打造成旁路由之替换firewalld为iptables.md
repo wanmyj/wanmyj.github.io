@@ -1,7 +1,6 @@
 ---
 layout: post
-data: "2023-01-25"
-tags: [config]
+tags: [firewall, iptables]
 categories: [CentOS7]
 ---
 

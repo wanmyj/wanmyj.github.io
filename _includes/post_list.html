@@ -24,7 +24,7 @@
         {% endif %}
     {% endfor %}
 
-    {% if has_uncategorized_posts != 0 %}
+    {% if has_uncategorized_posts == true %}
       <h3>uncategorized</h3>
       <ul>
         {% for post in site.posts %}
