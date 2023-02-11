@@ -6,7 +6,7 @@ categories: [CentOS7]
 ---
 
 
-## CentOS7的防火墙管理使用的是firewalld，这在设置iptables规则时不方便，所以要先要改造成用iptables来管理防火墙
+## CentOS7的防火墙管理使用的是firewalld，这在设置iptables规则时不方便(但是也能)，所以要先要改造成用iptables来管理防火墙
 
 [Reference](https://www.digitalocean.com/community/tutorials/how-to-migrate-from-firewalld-to-iptables-on-centos-7)
 
