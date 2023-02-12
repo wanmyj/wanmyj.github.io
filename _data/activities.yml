@@ -1,11 +1,11 @@
 activities:
-  - title: Chatgpt server development
+  - title: Chatgpt proxy server development
     start_time: 2022-12-01
     active: true
 
   - title: OpenWRT development
     start_time: 2022-12-01
-    active: true
+    active: false
 
   - title: WeChat Mini development
     start_time: 2022-12-01
