@@ -1,7 +1,7 @@
 ---
 layout: post
 \tags: [config, xray]
-categories: [CentOS7]
+categories: [PROXY]
 ---
 
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [firewall, iptables]
-categories: [CentOS7]
+categories: [PROXY]
 ---
 
 
