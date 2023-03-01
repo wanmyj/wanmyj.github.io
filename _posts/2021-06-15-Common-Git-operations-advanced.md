@@ -47,6 +47,9 @@ git config --global alias.ci commit
 git config --global alias.st status
 git config --global alias.fo 'fetch origin'
 git config --global alias.poh 'push origin HEAD'
+git config --global alias.cia 'commit --amend'
+git config --global alias.cian 'commit --amend --no-edit'
+
 ```
 # Git - how to find first commit of specific branch
 加入我们知道`branch`是从 `master` 拉出来的
