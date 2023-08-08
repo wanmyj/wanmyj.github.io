@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [cmd, shell]
-categories: [CentOS7]
+categories: [Linux]
 ---
 # CentOS7的常用shell操作 
 

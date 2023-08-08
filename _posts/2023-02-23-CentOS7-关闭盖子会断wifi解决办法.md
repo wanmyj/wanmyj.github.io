@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [config]
-categories: [CentOS7]
+categories: [Linux]
 ---
 
 

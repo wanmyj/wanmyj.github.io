@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [config, network, tcpdump, wireshark]
-categories: [CentOS7]
+categories: [Linux]
 ---
 
 Windows安装putty，CentOS7上安装tcpdump。   

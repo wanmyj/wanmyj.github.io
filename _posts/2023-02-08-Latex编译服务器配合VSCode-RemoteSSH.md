@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [LaTex]
-categories: [CentOS7]
+categories: [Linux]
 ---
 ## 如何自己搭一个LaTex编译服务器 
 
