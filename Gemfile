@@ -1,4 +1,5 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source "http://mirrors.tuna.tsinghua.edu.cn/rubygems"
+gem 'webrick'
 gem 'github-pages'
