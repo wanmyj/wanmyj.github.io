@@ -1,4 +1,3 @@
----
 layout: post
 tags: [config, git]
 categories: [GitOp]
@@ -9,6 +8,67 @@ categories: [GitOp]
 
 # git show 的时候，非ascii字符的文件名显示成 \nnn 形式应该怎么解决
 设置 Git 配置文件：在 Git 中运行 `git config --global core.quotepath off` ，这将关闭引用路径，并允许在 Git 输出中显示非 ASCII 字符。
+
+# how to find first commit of specific branch
+`git log master..branch --oneline | tail -1`
+`git cherry master -v | head -n 1`
+
+`cherry` - Shows the commits on your current branch that aren't present on a branch upstream (docs). An upstream (master in this case) is a point your current branch derives from.
+`-v` - Shows commit names (instead of just SHA's) - verbose.
+`head` - Unix command which prints n number of lines from a text
+
+# Update branch without checkout
+```
+Git fetch origin master:master
+Git branch -f branch-b branch-a 
+Will update branch-b to point to the head of branch-a(-f force)
+```
+# How to compare files from two different branches
+`git diff mybranch master -- myfile.cs`
+
+# How can I git stash a specific file?
+`git stash push <path>`
+`git stash push -m welcome_cart app/views/cart/welcome.thtml`
+# How to add file to existing stash in git?
+No you can't
+# How would I extract a single file (or changes to a file) from a git stash
+`git checkout stash@{0} -- <filename>`
+
+# Add only non-whitespace changes
+`git diff -U0 -w --no-color | git apply --cached --ignore-whitespace --unidiff-zero -`
+
+# GIT 查找两个commit之间的commit
+```
+good 1d4712d3394e1373
+bad 03d3c1355d 
+git rev-list --ancestry-path 1d4712d3394..03d3c1355d
+```
+# Stage only deleted files with git add
+`git ls-files --deleted | xargs git add`
+# Git modify old commit
+```
+git rebase --interactive commit^
+In the default editor, modify pick to edit in the line mentioning commit.
+Save the file and exit. git will interpret and automatically execute the commands in the file. You will find yourself in the previous situation in which you just had created commit 
+modifying
+git commit --all --amend --no-edit
+git rebase --continue
+```
+# Git compare modified files under a folder btwn 2 branches
+`git diff --name-status r2021/trunk..r2022/trunk -- Testing/Automation/Cube/CivilHarness/CommonLib/DesktopConnectorLib.cs Testing/Automation/Cube/CivilTestCases/DesktopConnector/`
+
+# remove local branches that have gone remotes:
+`git fetch -p && for branch in $(git branch -vv | grep ': gone]' | awk '{print $1}'); do git branch -D $branch; done`
+From <https://stackoverflow.com/questions/7726949/remove-tracking-branches-no-longer-on-remote> 
+
+# git log
+```
+git log --after="2014-02-12T16:36:00-07:00"
+git log --before="2014-02-12T16:36:00-07:00"
+git log --since="1 month ago"
+git log --since="2 weeks 3 days 2 hours 30 minutes 59 seconds ago"
+git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+```
 
 # git push ，不希望用git默认的用户名，需要用特别用户名
 * 现在git必须要证书认证才能push，为了安全，也为了减少麻烦，还是在本机为每个git账户单独配置一套证书对
