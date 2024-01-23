@@ -1,3 +1,4 @@
+---
 layout: post
 tags: [config, git]
 categories: [GitOp]
