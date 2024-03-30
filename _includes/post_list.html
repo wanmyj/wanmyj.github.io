@@ -1,6 +1,7 @@
 <div id="category-list">
   {% if site.posts.size > 0 %}
-    {% for category in site.categories %}
+    {% assign sorted_cats = site.categories | sort %}
+    {% for category in sorted_cats %}
       {% if category[1].size != 0 %}
         <h3>{{ category[0] }}</h3>
         <ul>
